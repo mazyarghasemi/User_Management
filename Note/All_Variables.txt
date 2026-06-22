@@ -1,0 +1,14 @@
+string Full_Name
+string Mobile
+string Service
+string Description 
+string Job 
+int Date_Born 
+string Gender
+string How_To_Introduce
+string Payment
+string Discount
+string Debit
+int Counter 
+int Date_Coming
+string Adress
