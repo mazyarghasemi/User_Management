@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnInsert = new System.Windows.Forms.ToolStripButton();
             this.btnUpdate = new System.Windows.Forms.ToolStripButton();
@@ -50,6 +51,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Full_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,8 +70,7 @@
             this.Counter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date_Coming = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.Next_Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -144,6 +146,9 @@
             // 
             // txtCode
             // 
+            this.txtCode.BackColor = System.Drawing.Color.Black;
+            this.txtCode.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCode.ForeColor = System.Drawing.Color.White;
             this.txtCode.Location = new System.Drawing.Point(872, 24);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(284, 26);
@@ -163,6 +168,12 @@
             // 
             // srchDate
             // 
+            this.srchDate.CalendarForeColor = System.Drawing.Color.White;
+            this.srchDate.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.srchDate.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.srchDate.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.srchDate.CalendarTrailingForeColor = System.Drawing.Color.White;
+            this.srchDate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.srchDate.Location = new System.Drawing.Point(135, 72);
             this.srchDate.Name = "srchDate";
             this.srchDate.Size = new System.Drawing.Size(227, 26);
@@ -182,6 +193,9 @@
             // 
             // srchIntroduce
             // 
+            this.srchIntroduce.BackColor = System.Drawing.Color.Black;
+            this.srchIntroduce.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srchIntroduce.ForeColor = System.Drawing.Color.White;
             this.srchIntroduce.Location = new System.Drawing.Point(872, 90);
             this.srchIntroduce.Name = "srchIntroduce";
             this.srchIntroduce.Size = new System.Drawing.Size(209, 26);
@@ -190,6 +204,9 @@
             // 
             // srchFull_Name
             // 
+            this.srchFull_Name.BackColor = System.Drawing.Color.Black;
+            this.srchFull_Name.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srchFull_Name.ForeColor = System.Drawing.Color.White;
             this.srchFull_Name.Location = new System.Drawing.Point(872, 58);
             this.srchFull_Name.Name = "srchFull_Name";
             this.srchFull_Name.Size = new System.Drawing.Size(250, 26);
@@ -198,6 +215,9 @@
             // 
             // srchMobile
             // 
+            this.srchMobile.BackColor = System.Drawing.Color.Black;
+            this.srchMobile.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srchMobile.ForeColor = System.Drawing.Color.White;
             this.srchMobile.Location = new System.Drawing.Point(135, 42);
             this.srchMobile.Name = "srchMobile";
             this.srchMobile.Size = new System.Drawing.Size(227, 26);
@@ -206,6 +226,9 @@
             // 
             // srchDescription
             // 
+            this.srchDescription.BackColor = System.Drawing.Color.Black;
+            this.srchDescription.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srchDescription.ForeColor = System.Drawing.Color.White;
             this.srchDescription.Location = new System.Drawing.Point(498, 74);
             this.srchDescription.Name = "srchDescription";
             this.srchDescription.Size = new System.Drawing.Size(211, 26);
@@ -214,6 +237,9 @@
             // 
             // srchService
             // 
+            this.srchService.BackColor = System.Drawing.Color.Black;
+            this.srchService.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srchService.ForeColor = System.Drawing.Color.White;
             this.srchService.Location = new System.Drawing.Point(498, 42);
             this.srchService.Name = "srchService";
             this.srchService.Size = new System.Drawing.Size(227, 26);
@@ -292,7 +318,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -311,15 +344,16 @@
             this.All_Payment,
             this.Counter,
             this.Date_Coming,
-            this.Address});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Address,
+            this.Next_Day});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(6, 27);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -327,6 +361,33 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1246, 486);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEdit.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnEdit.Location = new System.Drawing.Point(1195, 695);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnEdit.Size = new System.Drawing.Size(75, 46);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "اصلاح";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDelete.Location = new System.Drawing.Point(1097, 695);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnDelete.Size = new System.Drawing.Size(77, 46);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "حذف";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // ID
             // 
@@ -481,38 +542,20 @@
             this.Address.ReadOnly = true;
             this.Address.Width = 76;
             // 
-            // btnEdit
+            // Next_Day
             // 
-            this.btnEdit.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEdit.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnEdit.Location = new System.Drawing.Point(1195, 695);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnEdit.Size = new System.Drawing.Size(75, 46);
-            this.btnEdit.TabIndex = 3;
-            this.btnEdit.Text = "اصلاح";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDelete.Location = new System.Drawing.Point(1097, 695);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnDelete.Size = new System.Drawing.Size(77, 46);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "حذف";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.Next_Day.DataPropertyName = "Next_Day";
+            this.Next_Day.HeaderText = "تاریخ بعدی";
+            this.Next_Day.MinimumWidth = 6;
+            this.Next_Day.Name = "Next_Day";
+            this.Next_Day.ReadOnly = true;
+            this.Next_Day.Width = 103;
             // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1282, 753);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnDelete);
@@ -520,7 +563,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clients";
@@ -577,6 +620,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Counter;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date_Coming;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Next_Day;
     }
 }
 

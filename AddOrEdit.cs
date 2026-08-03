@@ -46,6 +46,7 @@ namespace At_First
                 txtCounter.Value = int.Parse(data.Rows[0][12].ToString());
                 txtDate_Coming.Value = Convert.ToDateTime(data.Rows[0][13]);
                 txtAddress.Text = data.Rows[0][14].ToString();
+                txtNext_Day.Value = Convert.ToDateTime(data.Rows[0][17]);
                 btnsubmit.Text = "ویرایش";
             }
         }
@@ -71,6 +72,7 @@ namespace At_First
             if (txtAll_Payment.Value == 0) { MessageBox.Show("لطفا هزینه پرداختی را وارد کنید", "ارور", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
             if (txtCounter.Value == 0) { MessageBox.Show("تعداد دفعات مراجعه کلاینت را وارد کنید!", "ارور", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
             if (txtDate_Coming.Value == txtDate_Coming.MinDate) { MessageBox.Show("لطفا تاریخ مراجعه کلاینت را وارد کنید!", "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
+            if(txtNext_Day.Value ==  txtNext_Day.MinDate) { MessageBox.Show("لطفا تاریخ مراجعه بعدی را وارد کنید", "هشدار", MessageBoxButtons.OK, MessageBoxIcon.Error);return false; }
             return true;
         }
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -87,11 +89,11 @@ namespace At_First
 
             if (ContactID == 0)
             {
-                isSuccess = repository.Insert(txtCode.Text, txtFull_Name.Text, txtMobile.Text, txtService.Text, txtDescription.Text, txtJob.Text, txtDate_Born.Value, txtGender.Text, txtHow_To_Introduce.Text, (int)txtPayment.Value, txtDiscount.Text, (int)txtDebit.Value, (int)txtAll_Payment.Value, (int)txtCounter.Value, txtDate_Coming.Value, txtAddress.Text);
+                isSuccess = repository.Insert(txtCode.Text, txtFull_Name.Text, txtMobile.Text, txtService.Text, txtDescription.Text, txtJob.Text, txtDate_Born.Value, txtGender.Text, txtHow_To_Introduce.Text, (int)txtPayment.Value, txtDiscount.Text, (int)txtDebit.Value, (int)txtAll_Payment.Value, (int)txtCounter.Value, txtDate_Coming.Value, txtAddress.Text, txtNext_Day.Value);
             }
             else
             {
-                isSuccess = repository.Edit(ContactID, txtCode.Text, txtFull_Name.Text, txtMobile.Text, txtService.Text, txtDescription.Text, txtJob.Text, txtDate_Born.Value, txtGender.Text, txtHow_To_Introduce.Text, (int)txtPayment.Value, txtDiscount.Text, (int)txtDebit.Value, (int)txtAll_Payment.Value, (int)txtCounter.Value, txtDate_Coming.Value, txtAddress.Text);
+                isSuccess = repository.Edit(ContactID, txtCode.Text, txtFull_Name.Text, txtMobile.Text, txtService.Text, txtDescription.Text, txtJob.Text, txtDate_Born.Value, txtGender.Text, txtHow_To_Introduce.Text, (int)txtPayment.Value, txtDiscount.Text, (int)txtDebit.Value, (int)txtAll_Payment.Value, (int)txtCounter.Value, txtDate_Coming.Value, txtAddress.Text, txtNext_Day.Value);
             }
             if (isSuccess)
             {

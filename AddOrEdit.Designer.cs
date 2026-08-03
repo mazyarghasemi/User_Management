@@ -61,6 +61,8 @@
             this.txtPayment = new System.Windows.Forms.NumericUpDown();
             this.txtDebit = new System.Windows.Forms.NumericUpDown();
             this.txtAll_Payment = new System.Windows.Forms.NumericUpDown();
+            this.txtNext_Day = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtCounter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPayment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebit)).BeginInit();
@@ -78,6 +80,8 @@
             // 
             // txtFull_Name
             // 
+            this.txtFull_Name.BackColor = System.Drawing.Color.Black;
+            this.txtFull_Name.ForeColor = System.Drawing.Color.White;
             this.txtFull_Name.Location = new System.Drawing.Point(533, 66);
             this.txtFull_Name.Name = "txtFull_Name";
             this.txtFull_Name.Size = new System.Drawing.Size(123, 23);
@@ -85,6 +89,8 @@
             // 
             // txtMobile
             // 
+            this.txtMobile.BackColor = System.Drawing.Color.Black;
+            this.txtMobile.ForeColor = System.Drawing.Color.White;
             this.txtMobile.Location = new System.Drawing.Point(533, 108);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(123, 23);
@@ -101,6 +107,8 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.BackColor = System.Drawing.Color.Black;
+            this.txtDescription.ForeColor = System.Drawing.Color.White;
             this.txtDescription.Location = new System.Drawing.Point(261, 111);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(158, 23);
@@ -117,6 +125,8 @@
             // 
             // txtService
             // 
+            this.txtService.BackColor = System.Drawing.Color.Black;
+            this.txtService.ForeColor = System.Drawing.Color.White;
             this.txtService.Location = new System.Drawing.Point(261, 69);
             this.txtService.Name = "txtService";
             this.txtService.Size = new System.Drawing.Size(168, 23);
@@ -142,6 +152,8 @@
             // 
             // txtGender
             // 
+            this.txtGender.BackColor = System.Drawing.Color.Black;
+            this.txtGender.ForeColor = System.Drawing.Color.White;
             this.txtGender.Location = new System.Drawing.Point(28, 108);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(134, 23);
@@ -167,6 +179,8 @@
             // 
             // txtJob
             // 
+            this.txtJob.BackColor = System.Drawing.Color.Black;
+            this.txtJob.ForeColor = System.Drawing.Color.White;
             this.txtJob.Location = new System.Drawing.Point(28, 70);
             this.txtJob.Name = "txtJob";
             this.txtJob.Size = new System.Drawing.Size(134, 23);
@@ -183,6 +197,8 @@
             // 
             // txtHow_To_Introduce
             // 
+            this.txtHow_To_Introduce.BackColor = System.Drawing.Color.Black;
+            this.txtHow_To_Introduce.ForeColor = System.Drawing.Color.White;
             this.txtHow_To_Introduce.Location = new System.Drawing.Point(28, 153);
             this.txtHow_To_Introduce.Multiline = true;
             this.txtHow_To_Introduce.Name = "txtHow_To_Introduce";
@@ -200,6 +216,8 @@
             // 
             // txtDiscount
             // 
+            this.txtDiscount.BackColor = System.Drawing.Color.Black;
+            this.txtDiscount.ForeColor = System.Drawing.Color.White;
             this.txtDiscount.Location = new System.Drawing.Point(425, 214);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(144, 23);
@@ -234,6 +252,8 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.BackColor = System.Drawing.Color.Black;
+            this.txtAddress.ForeColor = System.Drawing.Color.White;
             this.txtAddress.Location = new System.Drawing.Point(28, 217);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(279, 23);
@@ -251,7 +271,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(285, 275);
+            this.label13.Location = new System.Drawing.Point(285, 254);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(80, 16);
             this.label13.TabIndex = 27;
@@ -259,6 +279,8 @@
             // 
             // txtCounter
             // 
+            this.txtCounter.BackColor = System.Drawing.Color.Black;
+            this.txtCounter.ForeColor = System.Drawing.Color.White;
             this.txtCounter.Location = new System.Drawing.Point(429, 298);
             this.txtCounter.Maximum = new decimal(new int[] {
             40121405,
@@ -271,9 +293,9 @@
             // 
             // btnsubmit
             // 
-            this.btnsubmit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnsubmit.BackColor = System.Drawing.Color.White;
             this.btnsubmit.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsubmit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnsubmit.ForeColor = System.Drawing.Color.Black;
             this.btnsubmit.Location = new System.Drawing.Point(329, 336);
             this.btnsubmit.Name = "btnsubmit";
             this.btnsubmit.Size = new System.Drawing.Size(100, 51);
@@ -284,6 +306,11 @@
             // 
             // txtDate_Born
             // 
+            this.txtDate_Born.CalendarForeColor = System.Drawing.Color.White;
+            this.txtDate_Born.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.txtDate_Born.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.txtDate_Born.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.txtDate_Born.CalendarTrailingForeColor = System.Drawing.Color.White;
             this.txtDate_Born.Location = new System.Drawing.Point(465, 159);
             this.txtDate_Born.Name = "txtDate_Born";
             this.txtDate_Born.Size = new System.Drawing.Size(200, 23);
@@ -291,7 +318,12 @@
             // 
             // txtDate_Coming
             // 
-            this.txtDate_Coming.Location = new System.Drawing.Point(28, 275);
+            this.txtDate_Coming.CalendarForeColor = System.Drawing.Color.White;
+            this.txtDate_Coming.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.txtDate_Coming.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.txtDate_Coming.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.txtDate_Coming.CalendarTrailingForeColor = System.Drawing.Color.White;
+            this.txtDate_Coming.Location = new System.Drawing.Point(28, 254);
             this.txtDate_Coming.Name = "txtDate_Coming";
             this.txtDate_Coming.Size = new System.Drawing.Size(239, 23);
             this.txtDate_Coming.TabIndex = 36;
@@ -308,6 +340,9 @@
             // 
             // txtCode
             // 
+            this.txtCode.BackColor = System.Drawing.Color.Black;
+            this.txtCode.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCode.ForeColor = System.Drawing.Color.White;
             this.txtCode.Location = new System.Drawing.Point(261, 12);
             this.txtCode.Multiline = true;
             this.txtCode.Name = "txtCode";
@@ -325,6 +360,8 @@
             // 
             // txtPayment
             // 
+            this.txtPayment.BackColor = System.Drawing.Color.Black;
+            this.txtPayment.ForeColor = System.Drawing.Color.White;
             this.txtPayment.Location = new System.Drawing.Point(656, 217);
             this.txtPayment.Maximum = new decimal(new int[] {
             100000000,
@@ -337,6 +374,8 @@
             // 
             // txtDebit
             // 
+            this.txtDebit.BackColor = System.Drawing.Color.Black;
+            this.txtDebit.ForeColor = System.Drawing.Color.White;
             this.txtDebit.Location = new System.Drawing.Point(388, 252);
             this.txtDebit.Maximum = new decimal(new int[] {
             100000000,
@@ -349,6 +388,8 @@
             // 
             // txtAll_Payment
             // 
+            this.txtAll_Payment.BackColor = System.Drawing.Color.Black;
+            this.txtAll_Payment.ForeColor = System.Drawing.Color.White;
             this.txtAll_Payment.Location = new System.Drawing.Point(561, 252);
             this.txtAll_Payment.Maximum = new decimal(new int[] {
             100000000,
@@ -359,12 +400,35 @@
             this.txtAll_Payment.Size = new System.Drawing.Size(116, 23);
             this.txtAll_Payment.TabIndex = 43;
             // 
+            // txtNext_Day
+            // 
+            this.txtNext_Day.CalendarForeColor = System.Drawing.Color.White;
+            this.txtNext_Day.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.txtNext_Day.CalendarTitleBackColor = System.Drawing.Color.Black;
+            this.txtNext_Day.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.txtNext_Day.CalendarTrailingForeColor = System.Drawing.Color.White;
+            this.txtNext_Day.Location = new System.Drawing.Point(28, 300);
+            this.txtNext_Day.Name = "txtNext_Day";
+            this.txtNext_Day.Size = new System.Drawing.Size(239, 23);
+            this.txtNext_Day.TabIndex = 45;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(285, 300);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(80, 16);
+            this.label16.TabIndex = 44;
+            this.label16.Text = "تاریخ بعدی: ";
+            // 
             // AddOrEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 413);
+            this.Controls.Add(this.txtNext_Day);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.txtAll_Payment);
             this.Controls.Add(this.txtDebit);
             this.Controls.Add(this.txtPayment);
@@ -399,6 +463,7 @@
             this.Controls.Add(this.txtFull_Name);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "AddOrEdit";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -447,5 +512,7 @@
         private System.Windows.Forms.NumericUpDown txtPayment;
         private System.Windows.Forms.NumericUpDown txtDebit;
         private System.Windows.Forms.NumericUpDown txtAll_Payment;
+        private System.Windows.Forms.DateTimePicker txtNext_Day;
+        private System.Windows.Forms.Label label16;
     }
 }
